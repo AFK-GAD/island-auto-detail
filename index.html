@@ -150,6 +150,17 @@
       .why-img{height:280px;}
     }
   </style>
+<style>
+  .afk-tier-bar{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0b0c0e;border-top:2px solid #2979ff;padding:0.75rem 2rem;display:flex;align-items:center;justify-content:space-between;font-family:"Barlow",sans-serif;}
+  .afk-tier-label{font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a808c;}
+  .afk-tier-name{font-size:0.82rem;font-weight:500;color:#f0f2f5;margin-left:0.6rem;}
+  .afk-tier-price{font-size:0.75rem;font-weight:500;color:#2979ff;letter-spacing:0.1em;text-transform:uppercase;}
+  .afk-tier-cta{font-size:0.68rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#fff;background:#2979ff;padding:0.5rem 1.2rem;text-decoration:none;}
+  .afk-tier-cta:hover{background:#5393ff;}
+  .afk-tier-left{display:flex;align-items:center;gap:0.5rem;}
+  .afk-tier-sep{width:1px;height:20px;background:rgba(255,255,255,0.1);}
+  @media(max-width:600px){.afk-tier-sep,.afk-tier-price{display:none;}}
+</style>
 </head>
 <body>
 
@@ -337,5 +348,14 @@
   },{threshold:0.08});
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
+<div class="afk-tier-bar">
+  <div class="afk-tier-left">
+    <span class="afk-tier-label">AFK Co. Demo —</span>
+    <span class="afk-tier-name">Starter Site</span>
+    <div class="afk-tier-sep"></div>
+    <span class="afk-tier-price">From $150</span>
+  </div>
+  <a href="https://afkco.netlify.app/#contact" target="_blank" class="afk-tier-cta">Get This Package →</a>
+</div>
 </body>
 </html>
